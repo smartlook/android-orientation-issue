@@ -1,31 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyle"
-
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        tools:context=".MainActivity"
+        tools:ignore="HardcodedText">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Orientation test"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar"
-        tools:ignore="HardcodedText" />
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Force orientation change programmatically."
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/bForcePortrait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Force portrait" />
+
+        <Button
+            android:id="@+id/bForceReversePortrait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Force reverse portrait" />
+
+        <Button
+            android:id="@+id/bForceLandscape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Force landscape" />
+
+        <Button
+            android:id="@+id/bForceReverseLandscape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Force reverse landscape" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Open activity with orientation forced in manifest."
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/bPortraitActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open portrait activity" />
+
+        <Button
+            android:id="@+id/bReversePortraitActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open reverse portrait activity" />
+
+        <Button
+            android:id="@+id/bLandscapeActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open landscape activity" />
+
+        <Button
+            android:id="@+id/bReverseLandscapeActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open reverse landscape activity" />
+
+    </LinearLayout>
+</ScrollView>
